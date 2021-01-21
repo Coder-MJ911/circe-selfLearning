@@ -8,7 +8,7 @@ import scala.concurrent.ExecutionContext
 
 object HttpClientInstances {
 
-  def createClient(apiUrl: String) = {
+  def createClient(apiUrl: String): SyncHttpClient = {
     val ec = ExecutionContext.global
     implicit val sc: ContextShift[IO] = IO.contextShift(ec)
     new SyncHttpClient(apiUrl, BlazeClientBuilder[IO](ec).resource)
