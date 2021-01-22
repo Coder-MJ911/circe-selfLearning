@@ -1,4 +1,4 @@
-package http4s
+package callFromHttp4s.http4s
 
 import cats.effect.{ContextShift, IO}
 import org.http4s.client.blaze.BlazeClientBuilder
