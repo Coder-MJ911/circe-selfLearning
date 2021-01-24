@@ -1,6 +1,7 @@
 package simpleCirce.ancestor
 
 import io.circe.optics.JsonPath.root
+import simpleCirce.ancestor.DataPreset.pets
 
 object Main {
   def main(args: Array[String]): Unit = {

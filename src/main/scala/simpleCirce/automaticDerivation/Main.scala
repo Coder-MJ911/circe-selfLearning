@@ -2,7 +2,7 @@ package simpleCirce.automaticDerivation
 
 import io.circe.generic.auto._, io.circe.syntax._
 
-object AutoMain {
+object Main {
 
   def main(args: Array[String]): Unit = {
     val greetJson = Greeting("Hey", Person("Chris"), 3).asJson

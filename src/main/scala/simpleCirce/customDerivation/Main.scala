@@ -1,4 +1,4 @@
-package simpleCirce.customCirce
+package simpleCirce.customDerivation
 
 import io.circe.parser.decode
 import io.circe.syntax._

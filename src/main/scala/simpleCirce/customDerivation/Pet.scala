@@ -1,4 +1,4 @@
-package simpleCirce.customCirce
+package simpleCirce.customDerivation
 
 case class Pet(
                 id: Int,
