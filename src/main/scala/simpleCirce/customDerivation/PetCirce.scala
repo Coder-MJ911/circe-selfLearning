@@ -13,7 +13,7 @@ object PetCirce {
 
   implicit val decodePet: Decoder[Pet] = (c: HCursor) => for {
     id <- c.downField("id").as[Int]
-    name <- c.downField("type").as[String]
+    name <- c.downField("name").as[String]
     price <- c.downField("price").as[Double]
   } yield {
     Pet(id, name, price)

@@ -2,6 +2,7 @@ package callFromHttp4s
 
 import callFromHttp4s.http4s.HttpClientInstances.createClient
 import cats.effect.IO
+import io.circe.generic.auto._
 
 object Main {
 

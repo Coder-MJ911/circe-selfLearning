@@ -6,10 +6,10 @@ import simpleCirce.ancestor.Pet
 
 object Main {
   def main(args: Array[String]): Unit = {
-    //custom codes:
+    //Todo: custom codes:
     println("custom codes:")
     import PetCirce._
-    val pet = Pet(2, "cat", 2.09)
+    val pet = Pet(2, "dog", 2.09)
     val pJson = pet.asJson.noSpaces;
     val p2 = decode[Pet](pJson)
 
