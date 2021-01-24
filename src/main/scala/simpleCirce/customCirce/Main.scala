@@ -1,10 +1,8 @@
 package simpleCirce.customCirce
 
-import io.circe
-import simpleCirce.Pet
 import io.circe.parser.decode
 import io.circe.syntax._
-import simpleCirce.DataPreset.pets
+import simpleCirce.ancestor.Pet
 
 object Main {
   def main(args: Array[String]): Unit = {

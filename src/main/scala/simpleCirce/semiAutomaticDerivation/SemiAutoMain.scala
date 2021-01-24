@@ -3,7 +3,7 @@ package simpleCirce.semiAutomaticDerivation
 import io.circe._
 import io.circe.generic.semiauto._
 import io.circe.syntax.EncoderOps
-object SemiAuto {
+object SemiAutoMain {
 
   implicit val fooDecoder: Decoder[Foo] = deriveDecoder[Foo] //simply: deriveDecoder
   implicit val fooEncoder: Encoder[Foo] = deriveEncoder[Foo]
