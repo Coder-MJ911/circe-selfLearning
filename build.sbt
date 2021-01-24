@@ -6,6 +6,7 @@ scalaVersion := "2.13.4"
 
 val CirceVersion = "0.13.0"
 val Http4sVersion = "0.21.8"
+val paradiseVersion = "2.12.12"
 
 libraryDependencies ++= Seq(
   "org.http4s" %% "http4s-core" % Http4sVersion,
@@ -17,5 +18,6 @@ libraryDependencies ++= Seq(
   "io.circe" %% "circe-parser" % CirceVersion,
   "io.circe" %% "circe-optics" % CirceVersion,
   "org.http4s" %% "http4s-blaze-server" % Http4sVersion,
-  "org.http4s" %% "http4s-argonaut" % Http4sVersion
+  "org.http4s" %% "http4s-argonaut" % Http4sVersion,
+  "org.scalamacros" %% "paradise" % paradiseVersion
 )

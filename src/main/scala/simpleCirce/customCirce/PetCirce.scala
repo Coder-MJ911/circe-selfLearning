@@ -1,7 +1,7 @@
 package simpleCirce.customCirce
 
 import io.circe.{Decoder, Encoder, HCursor, Json}
-import simpleCirce.{ContactOwner, Pet}
+import simpleCirce.Pet
 
 object PetCirce {
 
@@ -20,7 +20,7 @@ object PetCirce {
         name <- c.downField("type").as[String]
         price <- c.downField("price").as[Double]
       } yield {
-        new Pet(id, name, price, ContactOwner.apply("street", "123-123-145"))
+        new Pet(id, name, price)
       }
   }
 
