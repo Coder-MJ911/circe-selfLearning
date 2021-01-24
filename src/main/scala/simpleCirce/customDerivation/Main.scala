@@ -2,7 +2,6 @@ package simpleCirce.customDerivation
 
 import io.circe.parser.decode
 import io.circe.syntax._
-import simpleCirce.ancestor.Pet
 
 object Main {
   def main(args: Array[String]): Unit = {

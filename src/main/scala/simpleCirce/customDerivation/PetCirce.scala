@@ -1,7 +1,6 @@
 package simpleCirce.customDerivation
 
 import io.circe.{Decoder, Encoder, HCursor, Json}
-import simpleCirce.ancestor.Pet
 
 object PetCirce {
 
