@@ -1,13 +1,14 @@
 package callFromHttp4s.http4s
 
 import cats.effect.{ContextShift, IO, Resource}
+import io.circe.Decoder
 import org.http4s.Method.GET
 import org.http4s.{EntityDecoder, Request, Uri}
 import org.http4s.client.Client
 
 class SyncHttpClient(targetServer: String, clientResource: Resource[IO, Client[IO]])(implicit cs: ContextShift[IO]) extends HttpClient(targetServer, clientResource) {
 
-  def get[A: io.circe.Decoder](): IO[A] = httpClient use { client =>
+  def get[A: Decoder](): IO[A] = httpClient use { client =>
     import org.http4s.circe.CirceEntityDecoder._
     send(client)(Request[IO](GET, Uri.unsafeFromString(s"$targetServer")))
   }

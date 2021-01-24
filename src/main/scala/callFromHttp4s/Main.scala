@@ -1,9 +1,7 @@
-package callFromHttp4s.main
+package callFromHttp4s
 
-import cats.effect.IO
 import callFromHttp4s.http4s.HttpClientInstances.createClient
-import io.circe.generic.auto._
-import callFromHttp4s.model.Pet
+import cats.effect.IO
 
 object Main {
 
