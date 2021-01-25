@@ -12,8 +12,8 @@ object Main {
     getStudent.unsafeRunSync()
   }
 
-  def getStudent: IO[Pet] = for {
-    student <- client.get[Pet]()
+  def getStudent: IO[List[Pet]] = for {
+    student <- client.get[List[Pet]]()
     _ = println(student)
   } yield student
 
