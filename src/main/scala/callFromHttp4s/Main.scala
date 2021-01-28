@@ -9,12 +9,12 @@ object Main {
   private val client = createClient("http://petstore-demo-endpoint.execute-api.com/petstore/pets")
 
   def main(args: Array[String]): Unit = {
-    getStudent.unsafeRunSync()
+    getPet.unsafeRunSync()
   }
 
-  def getStudent: IO[List[Pet]] = for {
-    student <- client.get[List[Pet]]()
-    _ = println(student)
-  } yield student
+  def getPet: IO[List[Pet]] = for {
+    pets <- client.get[List[Pet]]()
+    _ = println(pets)
+  } yield pets
 
 }

@@ -6,7 +6,6 @@ import io.circe.parser.parse
 object DataPreset {
   val pets: Json = parse(
     """{
-      |  {
       |      "id": "1",
       |      "name": "cat",
       |      "price": "10.12",
@@ -14,6 +13,5 @@ object DataPreset {
       |        "phone": "1234567890",
       |        "address": "Green Street"
       |      }
-      |    }
       |}""".stripMargin).getOrElse(Json.Null)
 }

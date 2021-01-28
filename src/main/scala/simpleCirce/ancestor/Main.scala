@@ -3,12 +3,13 @@ package simpleCirce.ancestor
 import io.circe.optics.JsonPath.root
 import io.circe.syntax.EncoderOps
 import io.circe.generic.auto._
-//import simpleCirce.ancestor.DataPreset.pets
+import io.circe.parser.parse
+import simpleCirce.ancestor.DataPreset.pets
 
 object Main {
   def main(args: Array[String]): Unit = {
 
-    val pets = Pet(1, "dog", 100.91, ContactOwner("Buddy", "Green Street")).asJson
+    //    val pets = Pet(1, "dog", 100.91, ContactOwner("Buddy", "Green Street")).asJson
 
     //Todo: cursor （Cats）:
     println("this is using cursor:")
@@ -21,10 +22,10 @@ object Main {
 
     //Todo: optics（Cats + ScalaZ）:
     println("this is using optics:")
-    val _contactAddress = root.contactOwner.address.string
-    val _name = root.name.string
-    val contactAddressByOptics = _contactAddress.getOption(pets)
-    val nameByOptics = _name.getOption(pets)
+    val contactAddressTemplate = root.contactOwner.address.string
+    val nameTemplate = root.name.string
+    val contactAddressByOptics = contactAddressTemplate.getOption(pets)
+    val nameByOptics = nameTemplate.getOption(pets)
     println("contactAddress = " + contactAddressByOptics)
     println("type = " + nameByOptics)
 
