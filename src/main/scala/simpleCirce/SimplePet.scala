@@ -1,6 +1,6 @@
-package simpleCirce.customDerivation
+package simpleCirce
 
-case class Pet(
+case class SimplePet(
                 id: Int,
                 name: String,
                 price: Double

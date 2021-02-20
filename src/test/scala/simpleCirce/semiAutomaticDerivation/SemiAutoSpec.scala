@@ -2,6 +2,7 @@ package simpleCirce.semiAutomaticDerivation
 
 import helpers.Specification
 import io.circe.syntax.EncoderOps
+import simpleCirce.{Foo, User}
 
 class SemiAutoSpec extends Specification with CirceHelpers {
 
@@ -20,11 +21,11 @@ class SemiAutoSpec extends Specification with CirceHelpers {
       user.toOption shouldEqual Some(User(1L, "second", "Curry"))
     }
 
-    "third" in {
-      val barFoo = Bar(2, "second").asJson
-      val bar = barFoo.as[Bar]
-      println("bar = " + bar.toOption)
-    }
+//    "third" in {
+//      val barFoo = Bar(2, "second").asJson
+//      val bar = barFoo.as[Bar]
+//      println("bar = " + bar.toOption)
+//    }
   }
 
 }

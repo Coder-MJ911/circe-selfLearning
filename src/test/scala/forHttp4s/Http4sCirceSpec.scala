@@ -16,9 +16,6 @@ class Http4sCirceSpec extends Specification{
       getPet(client).unsafeRunSync shouldEqual List(Pet(1,"dog",249.99), Pet(2,"cat",124.99), Pet(3,"fish",0.99))
     }
 
-    def getPet(client: SyncHttpClient): IO[List[Pet]] = for {
-      pets <- client.get[List[Pet]]()
-      _ = println(pets)
-    } yield pets
+    def getPet(client: SyncHttpClient): IO[List[Pet]] = client.get[List[Pet]]()
   }
 }

@@ -1,8 +1,9 @@
 package simpleCirce.automaticDervation
 
 import helpers.Specification
-import simpleCirce.automaticDerivation.{Greeting, Person}
-import io.circe.generic.auto._, io.circe.syntax._
+import io.circe.generic.auto._
+import io.circe.syntax._
+import simpleCirce.{Greeting, Person}
 
 class AutoSpec extends Specification{
   "automatic decode & encode" should {

@@ -2,6 +2,7 @@ package simpleCirce.semiAutomaticDerivation
 
 import io.circe.{Decoder, Encoder}
 import io.circe.generic.semiauto.{deriveDecoder, deriveEncoder}
+import simpleCirce.{Foo, User}
 
 trait CirceHelpers {
   implicit val fooDecoder: Decoder[Foo] = deriveDecoder[Foo] //simply: deriveDecoder

@@ -1,6 +1,6 @@
-package simpleCirce.ancestor
+package simpleCirce
 
-case class Pet(
+case class PetWithContact(
                 id: Int,
                 name: String,
                 price: Double,
