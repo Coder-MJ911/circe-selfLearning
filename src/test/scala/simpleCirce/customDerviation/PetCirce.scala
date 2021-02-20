@@ -1,8 +1,9 @@
-package simpleCirce.customDerivation
+package simpleCirce.customDerviation
 
 import io.circe.{Decoder, Encoder, HCursor, Json}
+import simpleCirce.customDerivation.Pet
 
-object PetCirce {
+trait PetCirce {
 
   implicit val encodePet: Encoder[Pet] = (a: Pet) => Json.obj(
     ("id", Json.fromInt(a.id)),
