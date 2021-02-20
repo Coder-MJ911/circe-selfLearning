@@ -3,7 +3,7 @@ package simpleCirce.ancestor
 import io.circe.Json
 import io.circe.parser.parse
 
-object DataPreset {
+trait DataPreset {
   val pets: Json = parse(
     """{
       |      "id": "1",
