@@ -18,9 +18,9 @@ object Main {
     println("foo = " + foo.toOption)
 
     // Todo: second
-//    val barFoo = Bar(2, "second").asJson
-//    val bar = barFoo.as[Bar]
-//    println("bar = " + bar.toOption)
+    val barFoo = Bar(2, "second").asJson
+    val bar = barFoo.as[Bar]
+    println("bar = " + bar.toOption)
 
     // Todo: third
     val userJson = User(1L, "third", "Curry").asJson(encodeUser)
