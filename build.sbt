@@ -19,5 +19,7 @@ libraryDependencies ++= Seq(
   "io.circe" %% "circe-optics" % CirceVersion,
   "org.http4s" %% "http4s-blaze-server" % Http4sVersion,
   "org.http4s" %% "http4s-argonaut" % Http4sVersion,
-  "org.scalamacros" %% "paradise" % paradiseVersion
+//  "org.scalamacros" %% "paradise" % paradiseVersion,
+  "org.scalatest" %% "scalatest" % "3.0.8" % Test,
+  "org.scalatestplus" %% "mockito-3-2" % "3.1.1.0" % Test,
 )
