@@ -1,4 +1,4 @@
-package forHttp4sTest
+package forHttp4s
 
 import callFromHttp4s.Pet
 import callFromHttp4s.http4s.HttpClientInstances.createClient
