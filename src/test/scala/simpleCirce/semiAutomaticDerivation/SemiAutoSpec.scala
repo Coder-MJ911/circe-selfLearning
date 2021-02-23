@@ -2,7 +2,7 @@ package simpleCirce.semiAutomaticDerivation
 
 import helpers.Specification
 import io.circe.syntax.EncoderOps
-import simpleCirce.{Foo, User}
+import simpleCirce.{ Foo, User}
 
 class SemiAutoSpec extends Specification with CirceHelpers {
 

@@ -2,7 +2,7 @@ name := "circeLearning"
 
 version := "0.1"
 
-scalaVersion := "2.13.4"
+scalaVersion := "2.12.9"
 
 val CirceVersion = "0.13.0"
 val Http4sVersion = "0.21.8"
@@ -20,6 +20,7 @@ libraryDependencies ++= Seq(
   "org.http4s" %% "http4s-blaze-server" % Http4sVersion,
   "org.http4s" %% "http4s-argonaut" % Http4sVersion,
 //  "org.scalamacros" %% "paradise" % paradiseVersion,
+  "org.scalamacros" %% "paradise" % "2.1.1" cross CrossVersion.full,
   "org.scalatest" %% "scalatest" % "3.0.8" % Test,
   "org.scalatestplus" %% "mockito-3-2" % "3.1.1.0" % Test,
 )
